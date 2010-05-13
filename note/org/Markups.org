@@ -1,0 +1,81 @@
+#+TITLE: Commonly used markups in org mode
+
+* Structural markup
+** Document title
+: #+Title: This is the title of the document
+
+** Heading
+: * Heading 1
+: ** Heading 1.1
+: ** Heading 1.2
+: *** Heading 1.2.1
+: *** Heading 1.2.2
+: * Heading 2
+#+END_EXAMPLE
+
+** Plain lists
+My favorite scenes are (in this order)
+1. The attack of the Rohirrim
+2. Eowyn's fight with the witch king
+   + this was already my favorite scene in the book
+   + I really like Miranda Otto.
+3. Peter Jackson being shot by Legolas
+    - on DVD only
+   He makes a really funny face when it happens.
+But in the end, no individual scenes matter but the film as a whole.
+Important actors in this film are:
+- Elijah Wood :: He plays Frodo
+- Sean Austin :: He plays Sam, Frodo's friend.  I still remember
+  him very well from his role as Mikey Walsh in The Goonies.
+
+** Emphasis and monospace
+
+: *bold*, /italic/, _underlined_,=code=,  ~verbatim~ and +strike-through+
+has the effect of
+*bold*, /italic/, _underlined_, =code=,  ~verbatim~ and +strike-through+:
+
+** Horizontal rules
+: -----
+or more
+: --------
+produces
+-----
+** Comment lines
+: #+BEGIN_COMMENT
+: Comment goes here
+: #+END_COMMENT
+
+* Images and Tables
+
+* Literal examples
+** ~BEGIN_EXAMPLE~
+
+: #+BEGIN_EXAMPLE
+: Some example from a text file.
+: #+END_EXAMPLE
+
+** colon
+: :Another example code
+
+** ~BEGIN_SRC~
+: #+BEGIN_SRC emacs-lisp
+: (defun org-xor (a b)
+:    "Exclusive or."
+:    (if a (not b) b))
+: #+END_SRC
+
+: #+BEGIN_SRC emacs-lisp -n -r
+: (save-excursion                  (ref:sc)
+:    (goto-char (point-min))       (ref:jump)
+: #+END_SRC
+: In line [[(sc)]] we remember the current position.  [[(jump)][Line (jump)]]
+: jumps to point-min.
+
+* Table
+
+| Name   | Phone  | Age           |
+|--------+--------+---------------|
+| \alpha | \beta  | \Aacute{}stor |
+| \gamma | \delta | \chi          |
+
+

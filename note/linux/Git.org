@@ -1,0 +1,21 @@
+#+TITLE: git
+
+* global setup
+  - download and install git
+  - setup
+#+BEGIN_EXAMPLE
+git config --global user.name "Your Name"
+git config --global user.email "Your Email"
+#+END_EXAMPLE
+
+* repository
+#+BEGIN_EXAMPLE
+mkdir test
+cd test
+git init
+touch README
+git add README
+git commit -m 'first commit'
+git remote add origin git@github.com:githubusername/yourproject.git
+git push origin master
+#+END_EXAMPLE
