@@ -1,0 +1,9 @@
+#+TITLE: Emacs
+
+* Tags
+Generate tags: =find . -type f -iname "*.[chS]" | xargs etags -a=
+
+Jump to tag: =M-.=
+Find next definition of last tag: =C-u M-.=
+Pop back to where you previously invoked =M-.= : =M-*=
+

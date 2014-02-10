@@ -4,18 +4,36 @@
   - download and install git
   - setup
 #+BEGIN_EXAMPLE
-git config --global user.name "Your Name"
-git config --global user.email "Your Email"
+  git config --global user.name "Your Name"
+  git config --global user.email "Your Email"
 #+END_EXAMPLE
 
 * repository
 #+BEGIN_EXAMPLE
-mkdir test
-cd test
-git init
-touch README
-git add README
-git commit -m 'first commit'
-git remote add origin git@github.com:githubusername/yourproject.git
-git push origin master
+  mkdir test
+  cd test
+  git init
+  touch README
+  git add README
+  git commit -m 'first commit'
+  git remote add origin git@github.com:githubusername/yourproject.git
+  git push origin master
+#+END_EXAMPLE
+
+* push through ssh
+If one wants to use =git push=, use =git clone
+git@github.com:your_user_name/your_repo.git=, rather than
+=git clone git://github.com:xxx/xxx.git=. Otherwise, it will probably
+generate a "You can't push to git" error while using the command =git push=.
+
+#+BEGIN_EXAMPLE
+  git remote rm origin
+  git remote add orgin git@github.com:your_user_name/your_repo.git
+  git push
+#+END_EXAMPLE
+
+* update local repository from remote
+#+BEGIN_EXAMPLE
+  git fetch origin
+  git merge origin/master
 #+END_EXAMPLE
